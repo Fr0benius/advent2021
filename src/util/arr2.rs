@@ -28,6 +28,9 @@ impl<T> Arr2<T> {
     pub fn iter(&self) -> impl Iterator<Item = &T> {
         self.v.iter()
     }
+    pub fn row(&self, i: usize) -> impl Iterator<Item = &T> {
+        (0..self.m).map(move |j| &self[i][j])
+    }
     pub fn col(&self, j: usize) -> impl Iterator<Item = &T> {
         (0..self.n).map(move |i| &self[i][j])
     }

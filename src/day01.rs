@@ -13,7 +13,6 @@ pub fn part2(input: &str) -> usize {
     v.windows(2).filter(|&w| w[0] < w[1]).count()
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
