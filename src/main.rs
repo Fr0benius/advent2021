@@ -1,4 +1,4 @@
-use advent2021::day20::*;
+use advent2021::day21::*;
 
 fn main() {
     dbg!(part1(INPUT));
