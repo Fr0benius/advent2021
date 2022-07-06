@@ -13,6 +13,8 @@
 #![allow(clippy::module_name_repetitions)]
 #![allow(clippy::type_complexity)]
 #![allow(clippy::maybe_infinite_iter)]
+#![allow(clippy::match_on_vec_items)]
+#![allow(clippy::enum_glob_use)]
 
 #![warn(clippy::if_same_then_else)]
 
@@ -34,7 +36,7 @@ pub mod day14;
 pub mod day15;
 pub mod day16;
 pub mod day17;
-// pub mod day18;
+pub mod day18;
 // pub mod day19;
 // pub mod day20;
 // pub mod day21;
