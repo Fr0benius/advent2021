@@ -1,5 +1,5 @@
 use std::ops::{Index, IndexMut};
-#[derive(Clone, PartialEq, Eq, Hash, Debug)]
+#[derive(Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
 pub struct Arr2<T> {
     n: usize,
     m: usize,
@@ -43,7 +43,12 @@ impl<T> Arr2<T> {
 
     pub fn enumerate(&self) -> impl Iterator<Item = ((usize, usize), &T)> {
         let m = self.dims().1;
-        self.iter().enumerate().map(move |(k, x)| ((k / m, k % m), x))
+        self.iter()
+            .enumerate()
+            .map(move |(k, x)| ((k / m, k % m), x))
+    }
+    pub fn swap(&mut self, (i0, j0): (usize, usize), (i1, j1): (usize, usize)) {
+        self.v.swap(i0 * self.m + j0, i1 * self.m + j1);
     }
 }
 
