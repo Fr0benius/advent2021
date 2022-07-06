@@ -86,6 +86,7 @@ extract_tuple_impl!(A, B, C);
 extract_tuple_impl!(A, B, C, D);
 extract_tuple_impl!(A, B, C, D, E);
 extract_tuple_impl!(A, B, C, D, E, F);
+extract_tuple_impl!(A, B, C, D, E, F, G);
 
 pub trait Gather<'a, T> {
     fn gather(&mut self) -> T;

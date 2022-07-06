@@ -7,4 +7,5 @@ pub mod shunting_yard;
 pub mod permutations;
 pub mod counter;
 pub mod cellular_auto;
+pub mod bin_search;
 pub mod misc;
